@@ -1,0 +1,106 @@
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop (master)
+$ cd learn_git_again
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ touch third.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git init
+Initialized empty Git repository in C:/Users/ESI/Desktop/learn_git_again/.git/
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) 59f1b0b] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 59f1b0b39951fc0ec8160f675d8f41e96f50aaae (HEAD -> master)
+Author: zahraboukthir <zahraboukthir@gmail.com>
+Date:   Fri Mar 12 08:08:49 2021 +0100
+
+    adding third.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ touch fourth.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master f60db31] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git rm third.txt
+rm 'third.txt'
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "update"
+[master 18711ac] update
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "removing third.txt"
+On branch master
+nothing to commit, working tree clean
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 18711acbb46eb87c0052fa800e0546ea237cf164 (HEAD -> master)
+Author: zahraboukthir <zahraboukthir@gmail.com>
+Date:   Fri Mar 12 08:12:20 2021 +0100
+
+    update
+
+commit f60db316a1107e0e8e9575b1fde1deb7589b3ae2
+Author: zahraboukthir <zahraboukthir@gmail.com>
+Date:   Fri Mar 12 08:10:24 2021 +0100
+
+    adding fourth.txt
+
+commit 59f1b0b39951fc0ec8160f675d8f41e96f50aaae
+Author: zahraboukthir <zahraboukthir@gmail.com>
+Date:   Fri Mar 12 08:08:49 2021 +0100
+
+    adding third.txt
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager cat
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=zahraboukthir
+user.email=zahraboukthir@gmail.com
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+ESI@LAPTOP-8TE36AH9 MINGW64 ~/Desktop/learn_git_again (master)
+$
